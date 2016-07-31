@@ -70,3 +70,21 @@ pgAdmin3. Attenzione che il nome utente è case sensitive.
 Mentre per MySQL sono andato a scaricare il MySQL Workbench direttamente dal
 sito MySQL, in cui trovo il .deb
 Lancio l'applicazione e creo l'utente lorenzo :)
+
+#Lezione 5
+Ho creato il db manualmente da mysql workbench. Ma potevo crearlo tramite comandi rake db:create.
+
+Lanciando il comando rails generate controllers Catalogues io non ho trovato nessuna modifica al file routes, per cui ho rilanciato il comando aggiungendo una action index. Questa mi crea il layout sotto views-catalogues chiamato index.html.erb e nel controller il metodo:
+def index
+end
+Oltre al route in routes.
+Ho voluto però scrivere in routes (togliendo ciò che mi ha generato):
+resources :catalogues
+
+Poi ho creato il metodo:
+def show
+end
+
+ed il file, sotto views-catalogues, show.html.erb scrivendo un semplice h1.
+
+Perfetto, funge.
