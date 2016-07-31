@@ -11,7 +11,8 @@ default: &default
   adapter: mysql2
   database: projectmeal_dev
   username: lorenzo
-  password: takion.2
+  # Inserisci la password
+  password: *****
   host: localhost
   port: 3306
 
