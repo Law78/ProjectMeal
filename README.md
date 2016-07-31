@@ -44,3 +44,29 @@ sudo apt-get install libpq-dev
 
 di nuovo: bundle update
 e ho risolto tutto.
+
+Da terminale ho scritto:
+sudo -u postgres psql postgres
+
+Dalla shell di postgres ho inserito il comando:
+\password postgres
+
+e inserito la password per l'utente postgres.
+Poi ho fatto \quit per uscire.
+
+Ho installato pgAdmin con il comando da terminale:
+sudo apt install pgAdmin3
+
+Avvio pgAdmin3, ho trovato l'icona sotto Programmazione e creo un utente lorenzo
+(NON L'ho fatto!!!)(Ora vado ad editare il file di configurazione:
+cd /etc/postgresql/9.5/main
+sudo vi pg_ident.conf)
+Ora da terminale posso scrivere:
+psql lorenzo -h 127.0.0.1 -d mydb
+
+dove lorenzo è lo user che ho creato da pgAdmin3 e mydb il db creato sempre da
+pgAdmin3. Attenzione che il nome utente è case sensitive.
+
+Mentre per MySQL sono andato a scaricare il MySQL Workbench direttamente dal
+sito MySQL, in cui trovo il .deb
+Lancio l'applicazione e creo l'utente lorenzo :)
